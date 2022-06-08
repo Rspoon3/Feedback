@@ -1,4 +1,4 @@
-# Multiple Orthogoanl Scrolling Sections
+# Multiple Orthogoanl Scrolling Sections Using UICollectionViewCompositionalLayout
 
 Feedback ID: FB10103235  
 Status: Open  
