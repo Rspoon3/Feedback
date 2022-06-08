@@ -8,9 +8,10 @@
 import UIKit
 import Algorithms
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UIScrollViewDelegate {
     var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
     var collectionView: UICollectionView! = nil
+    let contentOffsetSynchronizer = ContentOffsetSynchronizer()
 
     enum Section: Hashable {
         case main(id: UUID)
@@ -44,7 +45,12 @@ class ViewController: UIViewController {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .systemBackground
+        collectionView.delegate = self
         view.addSubview(collectionView)
+        
+        DispatchQueue.main.async {
+            self.registerScrollViewsForHorizontalScrollSyncing()
+        }
     }
     
     func configureDataSource() {
@@ -75,5 +81,19 @@ class ViewController: UIViewController {
         }
         
         dataSource.apply(snapshot)
+    }
+    
+
+    //MARK: - Workaround
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        registerScrollViewsForHorizontalScrollSyncing()
+    }
+
+    private func registerScrollViewsForHorizontalScrollSyncing() {
+        let scrollViews = collectionView.subviews.compactMap({$0 as? UIScrollView})
+        
+        for scrollView in scrollViews {
+            self.contentOffsetSynchronizer.register(scrollView)
+        }
     }
 }

@@ -14,6 +14,7 @@
 		A6F718B02850DF7500D911B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F718AF2850DF7500D911B7 /* Assets.xcassets */; };
 		A6F718B32850DF7500D911B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F718B12850DF7500D911B7 /* LaunchScreen.storyboard */; };
 		A6F718BC2850E39E00D911B7 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = A6F718BB2850E39E00D911B7 /* Algorithms */; };
+		A6F718C02850E84100D911B7 /* ContentOffsetSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F718BF2850E84100D911B7 /* ContentOffsetSynchronizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A6F718AF2850DF7500D911B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6F718B22850DF7500D911B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6F718B42850DF7500D911B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6F718BF2850E84100D911B7 /* ContentOffsetSynchronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentOffsetSynchronizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				A6F718A62850DF7400D911B7 /* AppDelegate.swift */,
 				A6F718A82850DF7400D911B7 /* SceneDelegate.swift */,
+				A6F718BF2850E84100D911B7 /* ContentOffsetSynchronizer.swift */,
 				A6F718AA2850DF7400D911B7 /* ViewController.swift */,
 				A6F718AC2850DF7400D911B7 /* Main.storyboard */,
 				A6F718AF2850DF7500D911B7 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			files = (
 				A6F718AB2850DF7400D911B7 /* ViewController.swift in Sources */,
 				A6F718A72850DF7400D911B7 /* AppDelegate.swift in Sources */,
+				A6F718C02850E84100D911B7 /* ContentOffsetSynchronizer.swift in Sources */,
 				A6F718A92850DF7400D911B7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
