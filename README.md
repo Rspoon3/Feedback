@@ -1,5 +1,9 @@
 # Equal Heights CollectionView Groups Using UICollectionViewCompositionalLayout
 
+Feedback ID: FB10104289  
+Status: Open  
+Date Submitted: 6-8-2022
+
 ## Summary 
 I have a UICollectionViewLayout grid with three columns. Each item in the column has a cell full of text. I would like all the columns to be the same height as the tallest item in the group. Using `UICollectionViewCompositionalLayout` I'm having a hard time getting the desired results.
 
