@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Details: UIViewController {
+class DetailsVC: UIViewController {
     let label = UILabel()
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class Details: UIViewController {
     }
     
     private func presentColorVC() {
-        let vc = Color()
+        let vc = ColorVC()
         let nav = UINavigationController(rootViewController: vc)
         nav.definesPresentationContext = true
         nav.modalPresentationStyle = .currentContext

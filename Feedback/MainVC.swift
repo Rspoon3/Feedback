@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Main: UITableViewController {
+class MainVC: UITableViewController {
     let numbers = Array(0..<10).map({"Value \($0)"})
 
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class Main: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
-        let vc = Details()
+        let vc = DetailsVC()
         let nav = UINavigationController(rootViewController: vc)
 
         showDetailViewController(nav, sender: nil)

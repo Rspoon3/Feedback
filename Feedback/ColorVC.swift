@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Color: UIViewController {
+class ColorVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Color"

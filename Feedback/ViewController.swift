@@ -9,8 +9,8 @@ import UIKit
 
 
 class ViewController: UIViewController, UISplitViewControllerDelegate{
-    let main = Main()
-    let details = Details()
+    let main = MainVC()
+    let details = DetailsVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ class ViewController: UIViewController, UISplitViewControllerDelegate{
         let navs = svc.viewControllers.compactMap {$0 as? UINavigationController }
         let vcs = navs.flatMap(\.viewControllers)
         
-        guard let details = vcs.compactMap({$0 as? Details}).first else {
+        guard let details = vcs.compactMap({$0 as? DetailsVC}).first else {
             return .primary
         }
         
